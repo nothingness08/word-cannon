@@ -12,10 +12,10 @@ function randomInt(max) {
 function randomWord(correctWord) {
   const words = ["ring", "drink", "fang", "king", "strong", "swing", "stung", "stink", "bank", "junk", "pink", "wing"];
   if (correctWord) {
-    const weightedWords = [...Array(2).fill(correctWord), ...words]; 
+    const weightedWords = [...Array(4).fill(correctWord), ...words]; 
     return weightedWords[randomInt(weightedWords.length -1)];
-    //probability of correct word chosen is (2+1)/14
-    //probability of other word chosen is 1/14
+    //probability of correct word chosen is (4+1)/16
+    //probability of other word chosen is 1/16
   } 
   return words[randomInt(words.length - 1)];
 }

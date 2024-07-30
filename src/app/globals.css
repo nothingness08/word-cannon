@@ -7,64 +7,64 @@
 	background-color: #87ceeb;
   }
   
-  .cannon {
-	position: absolute;
-	width: 120px;
-	height: 120px;
-	user-select: none;
-  }
-  
-  .ball {
-	position: absolute;
-	width: 20px;
-	height: 20px;
-  }
-  
-  .image {
-	position: absolute;
-	width: 40px;
-	height: 40px;
-  }
-  
-  .correct-Word {
-	text-align: center;
-  }
-  
-  .buttons {
-	position: absolute;
-	left: 630px; /* Adjust the right spacing */
-	top: 20%;
-	transform: translateY(-30%);
-  }
-  
-  .arrows {
-	width: 100px;
-	height: 150px;
-	margin-bottom: 10px; 
-	background-color: #fff;
-	border: 2px solid #000;
-	cursor: pointer;
-	background-size: cover;
-  }
+.cannon {
+position: absolute;
+width: 120px;
+height: 120px;
+user-select: none;
+}
 
-  .fire-button {
-	width: 150px;
-	height: 150px;
-	margin-bottom: 10px; 
-	background-color: #fff;
-	border: 2px solid #000;
-	cursor: pointer;
-	background-size: cover;
-  }
-  
-  .arrows:hover {
-	background-color: #f0f0f0;
-  }
-  
-  .score {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	font-size: 1.5em;
-	color: #000;
-  }
+.ball {
+position: absolute;
+width: 20px;
+height: 20px;
+}
+
+.image {
+position: absolute;
+width: 40px;
+height: 40px;
+}
+
+.correct-Word {
+text-align: center;
+}
+
+.buttons {
+position: absolute;
+left: 630px; /* Adjust the right spacing */
+top: 20%;
+transform: translateY(-30%);
+}
+
+.arrows {
+  width: 100px;
+  height: 150px;
+  margin-bottom: 10px; 
+  background-color: #fff;
+  border: 2px solid #000;
+  cursor: pointer;
+  background-size: cover;
+}
+
+.fire-button {
+width: 150px;
+height: 150px;
+margin-bottom: 10px; 
+background-color: #fff;
+border: 2px solid #000;
+cursor: pointer;
+background-size: cover;
+}
+
+.arrows:hover {
+background-color: #f0f0f0;
+}
+
+.score {
+position: absolute;
+top: 10px;
+left: 10px;
+font-size: 1.5em;
+color: #000;
+}
