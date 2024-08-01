@@ -6,7 +6,7 @@ import Cannon from "./Cannon";
 import Images from "./Images";
 
 function randomInt(max) {
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * (max+1));
 }
 
 function randomWord(correctWord) {
@@ -154,7 +154,7 @@ export default function Home() {
             setCorrectWord(randomWord(null));
           }
           else{
-
+            setGameOver(true);
           }
           updatedBalls = updatedBalls.filter((_, idx) => idx !== ballIndex);
           updatedImages = updatedImages.filter((_, idx) => idx !== imageIndex);
@@ -178,10 +178,14 @@ export default function Home() {
     if(event.key === " "){
       fireCannon();
     }
-    if(!gameStarted){
+    if(!gameStarted || gameOver){
       setGameStarted(true);
+      setGameOver(false);
+      setScore(0);
+      setImages([]);
+      setCannonPos({x: 240, y: 480});
     }
-  }, [fireCannon]);
+  }, [fireCannon, gameOver]);
 
   const handleKeyUp = useCallback((event) => {
     const newDirection = event.key.replace("Arrow", "");
