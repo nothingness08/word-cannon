@@ -11,8 +11,11 @@ function randomInt(max) {
 
 function randomWord(correctWord) {
   const words = ["ring", "drink", "fang", "king", "strong", "swing", "stung", "stink", "bank", "junk", "pink", "wing"];
+  const probability = 0.33;
+  let additionalCorrectWords = Math.floor(((probability*words.length) -1)/(1-probability));
+
   if (correctWord) {
-    const weightedWords = [...Array(4).fill(correctWord), ...words]; 
+    const weightedWords = [...Array(additionalCorrectWords).fill(correctWord), ...words]; 
     return weightedWords[randomInt(weightedWords.length -1)];
     //probability of correct word chosen is (4+1)/16
     //probability of other word chosen is 1/16
@@ -23,7 +26,6 @@ function randomWord(correctWord) {
 function wordToURL(word){
   return ('/images/' + word + '.png');
 }
-
 
 export default function Home() {
   const [cannonPos, setCannonPos] = useState({x: 240, y: 480});
@@ -244,4 +246,3 @@ export default function Home() {
     </div>
   );
 }
-
